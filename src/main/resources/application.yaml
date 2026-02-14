@@ -1,0 +1,32 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: Album Ratings
+  data:
+    mongodb:
+      uri: mongodb://${MONGO_ADMIN_USERNAME}:${MONGO_ADMIN_PASSWORD}@localhost:27017/albumratings?authSource=admin
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/AlbumRatings
+spotify:
+  api:
+    base-url: https://api.spotify.com/v1
+  auth:
+    base-url: https://accounts.spotify.com/api
+    client-id: ${CLIENT_ID}
+    client-secret: ${CLIENT_SECRET}
+
+keycloak:
+  url: http://localhost:8080
+  auth-url: http://localhost:8080/realms/AlbumRatings/protocol/openid-connect/token
+  admin-url: http://localhost:8080/admin/realms/AlbumRatings
+  realm: AlbumRatings
+  client-id: album-ratings-backend
+  client-secret: ${KEYCLOAK_CLIENT_SECRET}
+  admin:
+    username: ${KEYCLOAK_ADMIN_USERNAME}
+    password: ${KEYCLOAK_ADMIN_PASSWORD}

@@ -1,0 +1,7 @@
+Start postgres_keycloak
+description: Start a PostgreSQL container for Keycloak
+ - docker start postgres_keycloak
+
+Start keycloak
+description: Start a Keycloak container
+ - docker start keycloak
