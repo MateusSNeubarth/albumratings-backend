@@ -21,9 +21,9 @@ spotify:
     client-secret: ${CLIENT_SECRET}
 
 keycloak:
-  url: http://localhost:8080
-  auth-url: http://localhost:8080/realms/AlbumRatings/protocol/openid-connect/token
-  admin-url: http://localhost:8080/admin/realms/AlbumRatings
+  base-url: http://localhost:8080/
+  token-url: realms/AlbumRatings/protocol/openid-connect/token
+  admin-url: admin/realms/AlbumRatings/users
   realm: AlbumRatings
   client-id: album-ratings-backend
   client-secret: ${KEYCLOAK_CLIENT_SECRET}

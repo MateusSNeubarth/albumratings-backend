@@ -1,6 +1,6 @@
 package com.panvel.mneubarth.albumratings.dto.response;
 
-import com.panvel.mneubarth.albumratings.models.UserAlbumRatings;
+import com.panvel.mneubarth.albumratings.infrastructure.database.models.UserAlbumRatings;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
